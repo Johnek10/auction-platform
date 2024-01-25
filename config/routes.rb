@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :products
   root 'pages#home'
   devise_for :admin, controllers: {
   sessions: 'admin/sessions'

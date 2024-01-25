@@ -3,7 +3,7 @@
 
 <% if user_signed_in? %>
  <%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete } %>
- <%= link_to "Edit registration", edit_registration_path%>
+ <%= link_to "Edit registration", edit_user_registration_path%>
  <%elsif !admin_signed_in? %>
  <%= link_to "Sign up", new_user_registration_path %>
  <%= link_to "Sign in", new_user_session_path%>
@@ -12,7 +12,7 @@
 <h3>Admin links</h3>
  <% if admin_signed_in? %>
  <%= link_to "Sign out", destroy_admin_session_path, data: { turbo_method: :delete } %>
- <%= link_to "Edit registration", edit_registration_path%>
+ <%= link_to "Edit registration", edit_admin_egistration_path%>
  <%elseif !user_signed_in? %>
  <%= link_to "Sign up", new_admin_registration_path %>
  <%= link_to "Sign in", new_admin_session_path%>
